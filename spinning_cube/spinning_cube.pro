@@ -5,7 +5,7 @@ TEMPLATE = app
 CONFIG += c++11
 CONFIG -= qt
 
-DESTDIR = bin
+DESTDIR = ../bin
 OBJECTS_DIR = obj
 
 CONFIG(release, debug|release): DEFINES += NDEBUG
@@ -15,7 +15,7 @@ INCLUDEPATH += ../dep/hGLES/include\
                ../dep/glm\
 
 SOURCES += \
-    src/main.cpp \
+   spinning_cube.cpp\
     ../dep/hGLES/lib_hgles.cpp
 
 HEADERS += \
