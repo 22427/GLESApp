@@ -1,0 +1,9 @@
+[submodule "dep/hGLES"]
+	path = dep/hGLES
+	url = https://github.com/22427/hGLES.git
+[submodule "dep/td"]
+	path = dep/td
+	url = https://github.com/22427/td.git
+[submodule "dep/glm"]
+	path = dep/glm
+	url = https://github.com/g-truc/glm.git
