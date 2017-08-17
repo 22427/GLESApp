@@ -24,10 +24,13 @@ QMAKE_RPATHDIR += \$\$ORIGIN
 QMAKE_LFLAGS += '-Wl,-rpath,\'\$$ORIGIN\''
 
 # crude hack to determine wheather this is build on a RaspberryPI
-LIBS += -L../dep/hGLES/lib -lglfw
 exists(/opt/vc/lib/libmmal.so){
 DEFINES += USE_PI
+LIBS += -L/opt/vc/lib/ -ldl -lbcm_host -lvcos -lvchiq_arm -lGLESv2 -lEGL -lpthread -lrt
+INCLUDEPATH += /opt/vc/include/
 QMAKE_CXXFLAGS += -Wno-variadic-macros -std=c++11
+}else{
+LIBS += -L../dep/hGLES/lib -lglfw
 }
 
 
